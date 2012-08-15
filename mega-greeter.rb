@@ -14,9 +14,9 @@ class MegaGreeter
   def hi
     if @names.nil?
       put "Hello World!"
-    else if @names.respond_to?("each")
+    elsif @names.respond_to?("each")
       @names.each do |name|
-          puts "Hello #{name}"
+        puts "Hello #{name}"
       end
     else
       puts "Hello #{names}"

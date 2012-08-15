@@ -35,21 +35,21 @@ class MegaGreeter
   end
 end
 
-  if __FILE__ == $0
-    mg = MegaGreeter.new
-    mg.hi
-    mg.bye
+if __FILE__ == $0
+  mg = MegaGreeter.new
+  mg.hi
+  mg.bye
 
-    puts "######################"
+  puts "######################"
 
-    mg.names = "Theo"
-    mg.hi
-    mg.bye
+  mg.names = "Theo"
+  mg.hi
+  mg.bye
 
-    puts "######################"
+  puts "######################"
 
-    mg.names = ["Theo", "Chloe", "Chris", "Marc", "Laurence", "Muguette", "Claude"]
-    mg.hi
-    mg.bye
+  mg.names = ["Theo", "Chloe", "Chris", "Marc", "Laurence", "Muguette", "Claude"]
+  mg.hi
+  mg.bye
 
-  end
+end

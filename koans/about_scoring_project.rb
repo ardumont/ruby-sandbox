@@ -38,7 +38,7 @@ def score(dice)
   h.map do |k, v|
     if k == 1
       if v >= 3
-        s +=1000
+        s += 1000
         if v - 3 > 0
           s += 100 * (v - 3)
         end

@@ -22,6 +22,19 @@ class MegaGreeter
       puts "Hello #{names}"
     end
   end
+
+    # say bye to everybody
+    def bye
+      if @names.nil?
+        put "Bye World, come back soon!"
+      else if @names.respond_to?("join")
+        puts "Bye #{@names.join(", ")}, come baqck soon!"
+      else
+        puts "Bye #{names}, come back soon!"
+      end
+    end
+
+
 end
 
 

@@ -14,19 +14,23 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  args = [a, b, c]
-  args.map { |c| if c <= 0
-                   raise TriangleError.new("Side of a triangle cannot be negative")
+  # simple checks about negative or zero values
+  [a, b, c].map { |c| if c <= 0
+                   raise TriangleError.new("Side of a triangle cannot be zero or negative!")
                  end
   }
-  # the passing case
-  if a == b && b == c
-    return :equilateral
-  elsif a == b || a == c || b == c
-    return :isosceles
-  else
-    return :scalene
-  end
+ if a+b>c && a+c>b && b+c>a
+    # the passing case
+    if a == b && b == c
+      return :equilateral
+    elsif a == b || a == c || b == c
+      return :isosceles
+    else
+      return :scalene
+    end
+ else
+  raise TriangleError.new("The sum of 2 sides must be superior or equal to the third side!")
+ end
 end
 
 # Error class used in part 2.  No need to change this code.

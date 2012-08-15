@@ -14,6 +14,12 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  args = [a, b, c]
+  args.map { |c| if c <= 0
+                   raise TriangleError.new("Side of a triangle cannot be negative")
+                 end
+  }
+  # the passing case
   if a == b && b == c
     return :equilateral
   elsif a == b || a == c || b == c

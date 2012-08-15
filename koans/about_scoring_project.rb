@@ -30,7 +30,7 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 # Your goal is to write the score method.
 
 def score(dice)
-  h = Hash.new{|hash, key| hash[key] = 0}
+  h = Hash.new(0)
   # First the group-by
   dice.map do |v| h[v] += 1 end
   # then compute the result

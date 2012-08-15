@@ -27,12 +27,29 @@ class MegaGreeter
   def bye
     if @names.nil?
       puts "Bye World, come back soon!"
-    else if @names.respond_to?("join")
-      puts "Bye #{@names.join(", ")}, come baqck soon!"
+    elsif @names.respond_to?("join")
+      puts "Bye #{@names.join(", ")}, come back soon!"
     else
       puts "Bye #{names}, come back soon!"
     end
   end
 end
 
+  if __FILE__ == $0
+    mg = MegaGreeter.new
+    mg.hi
+    mg.bye
 
+    puts "######################"
+
+    mg.names = "Theo"
+    mg.hi
+    mg.bye
+
+    puts "######################"
+
+    mg.names = ["Theo", "Chloe", "Chris", "Marc", "Laurence", "Muguette", "Claude"]
+    mg.hi
+    mg.bye
+
+  end
